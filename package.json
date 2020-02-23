@@ -1,0 +1,19 @@
+{
+  "name": "maratonaDev",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "repository": "https://github.com/drk477/maratonaDev.git",
+  "author": "Wagner Oliveira de Almeida <61123555+drk477@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "nunjucks": "^3.2.0",
+    "pg": "^7.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

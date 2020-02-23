@@ -21,7 +21,7 @@
   <!-- São configurações da minha página -->
   <title>Doe sangue! Doe vida!</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   
 </head>
 
@@ -29,7 +29,7 @@
   <header>
     <img
       class="logo"
-      src="logo.png" 
+      src="/logo.png" 
       alt="Imagem de DOE">
     <h2>A sua doação importa</h2>
     <p>Até 3 vidas com 1 doação</p>
@@ -40,9 +40,9 @@
 
   </header>
 
-  <section class="form">
+  <section class="form hide">
     <h2>Entre na lista de doadores</h2>
-    <form action="/">
+    <form action="/" method="POST" >
       <input
         type="text" 
         name="name"
@@ -50,7 +50,7 @@
       >
       <input
         type="text" 
-        name="Email"
+        name="email"
         placeholder="Email"
       >
       <input
@@ -66,27 +66,22 @@
     <h2>Últimos <span>doadores</span></h2>
 
     <section class="donors">
-      <div class="donor">
-        <div class="blood">AB+</div>
-        <p>Diego Fernandez</p>
-      </div>
-      <div class="donor">
-        <div class="blood">B+</div>
-        <p>Cleiton Souza</p>
-      </div>
-      <div class="donor">
-        <div class="blood">A+</div>
-        <p>Robson Marques</p>
-      </div>
-      <div class="donor">
-        <div class="blood">O+</div>
-        <p>Mayk Brito</p>
-      </div>
+
+      {% for donor in donors %}
+
+        <div class="donor">
+          <div class="blood">{{donor.blood}}</div>
+          <p>{{donor.name}}</p>
+        </div>
+
+      {%endfor%}  
+
     </section>
   </main>
 
   <footer> Com ❤️ DrK </footer>
 
+  <script src="/scripts.js"></script>
 </body>
 
 </html>
